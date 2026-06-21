@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Al Pacchero — Talijanska trattoria, Zadar</title>
+<meta name="description" content="Al Pacchero — svijetla talijanska trattoria u Zadru. Paccheri iz Kampanije, ručno rađena pašta, jadranska riba i talijanska vina. 4.8 ★ od 970 gostiju." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --pergament:#F4EFE4;
+  --pergament-2:#EDE6D6;
+  --cream:#FBF8F1;
+  --olive:#5B6B3A;
+  --olive-deep:#3F4C28;
+  --tomato:#C1432E;
+  --ink:#2A2620;
+  --ink-soft:#6B6357;
+  --line:rgba(42,38,32,.14);
+  --font-display:'Cormorant Garamond',serif;
+  --font-body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--pergament);color:var(--ink);font-family:var(--font-body);font-weight:300;font-size:16.5px;line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--tomato);color:var(--cream)}
+
+.wrap{max-width:1300px;margin:0 auto;padding:0 44px}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--tomato);display:inline-block}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.04}
+h2{font-size:clamp(36px,5vw,64px);letter-spacing:.005em}
+h3{font-size:clamp(22px,3vw,30px)}
+.italic{font-style:italic;font-weight:500}
+
+/* HEADER */
+.header{position:fixed;top:0;left:0;width:100%;z-index:100;padding:22px 0;transition:.4s;border-bottom:1px solid transparent}
+.header.scrolled{background:rgba(244,239,228,.94);backdrop-filter:blur(10px);padding:14px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--font-display);font-size:26px;font-weight:600;letter-spacing:.03em;color:var(--olive-deep)}
+.brand span{color:var(--tomato)}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);transition:color .3s}
+.nav-links a:hover{color:var(--tomato)}
+.btn-res{font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:13px 24px;background:var(--olive);color:var(--cream);border:none;cursor:pointer;transition:background .35s;font-family:var(--font-body);font-weight:500}
+.btn-res:hover{background:var(--olive-deep)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{width:26px;height:1.5px;background:var(--ink);transition:.3s}
+
+/* HERO SPLIT */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr;align-items:stretch;padding-top:0}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:120px 64px 80px 44px}
+.hero-text .eyebrow{margin-bottom:24px;opacity:0}
+.hero-text h1{font-size:clamp(46px,6vw,92px);line-height:1.0;margin-bottom:0;color:var(--olive-deep)}
+.hero-text h1 .l{display:block;overflow:hidden;padding-bottom:.04em}
+.hero-text h1 .l span{display:inline-block}
+.hero-text h1 .red{color:var(--tomato);font-style:italic;font-weight:500}
+.hero-lead{font-size:17px;color:var(--ink-soft);max-width:440px;margin-top:34px;opacity:0}
+.hero-cta{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;opacity:0}
+.hero-cta .primary{padding:15px 30px;background:var(--tomato);color:var(--cream);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;font-family:var(--font-body);transition:background .3s}
+.hero-cta .primary:hover{background:#a8392604;background:#9e3422}
+.hero-cta .ghost{padding:15px 30px;border:1px solid var(--olive);color:var(--olive-deep);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;background:transparent;cursor:pointer;font-family:var(--font-body);transition:.3s}
+.hero-cta .ghost:hover{background:var(--olive);color:var(--cream)}
+.hero-img{position:relative;overflow:hidden}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 0 100% 0)}
+.hero-badge{position:absolute;left:44px;bottom:44px;z-index:3;background:var(--cream);padding:18px 26px;display:flex;align-items:center;gap:16px;box-shadow:0 18px 40px rgba(42,38,32,.16)}
+.hero-badge .num{font-family:var(--font-display);font-size:42px;font-weight:600;color:var(--tomato);line-height:1}
+.hero-badge .lbl{font-size:12px;letter-spacing:.06em;color:var(--ink-soft);line-height:1.4}
+.hero-badge .lbl b{color:var(--ink);font-weight:500}
+
+/* DIVIDER (pasta line motif) */
+.divider{padding:40px 0;background:var(--pergament-2)}
+.divider svg{width:100%;height:30px;display:block;opacity:.5}
+.divider svg path{stroke:var(--olive);stroke-width:1.4;fill:none}
+
+/* SECTIONS */
+.pad{padding:120px 0}
+.reveal{opacity:0;transform:translateY(28px)}
+.sec-head{max-width:680px;margin-bottom:64px}
+.sec-head .eyebrow{margin-bottom:16px}
+.sec-head h2{color:var(--olive-deep)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* STATS strip */
+.stats{background:var(--olive-deep);color:var(--cream)}
+.stats .row{display:flex;justify-content:space-around;flex-wrap:wrap;gap:30px;text-align:center}
+.stat .n{font-family:var(--font-display);font-size:clamp(44px,6vw,76px);font-weight:600;line-height:1;color:var(--cream)}
+.stat .n .star{color:#E8C547}
+.stat .c{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(251,248,241,.7);margin-top:14px}
+
+/* MANIFEST */
+.manifest{background:var(--cream)}
+.manifest .inner{max-width:760px;margin:0 auto;text-align:center}
+.manifest p{font-family:var(--font-display);font-size:clamp(24px,3.3vw,40px);line-height:1.4;font-weight:500;color:var(--ink)}
+.manifest .red{color:var(--tomato);font-style:italic}
+.manifest .small{font-family:var(--font-body);font-size:16px;color:var(--ink-soft);margin-top:30px;font-weight:300}
+
+/* MENU */
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 80px;max-width:1080px;margin:0 auto}
+.menu-col h3{color:var(--tomato);font-style:italic;margin-bottom:12px;font-weight:500}
+.menu-item{padding:20px 0;border-bottom:1px dashed var(--line)}
+.menu-item:last-child{border-bottom:none}
+.menu-item .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.menu-item .name{font-family:var(--font-display);font-size:23px;font-weight:600;color:var(--ink)}
+.menu-item .price{font-family:var(--font-body);font-size:14px;color:var(--olive);white-space:nowrap;font-weight:500}
+.menu-item .desc{font-size:14.5px;color:var(--ink-soft);margin-top:5px;line-height:1.6}
+
+/* GALLERY draggable */
+.gallery{background:var(--pergament-2);overflow:hidden}
+.drag-track{display:flex;gap:20px;cursor:grab;padding-bottom:8px;will-change:transform}
+.drag-track.dragging{cursor:grabbing}
+.drag-card{flex:0 0 auto;width:380px;height:480px;overflow:hidden;position:relative}
+.drag-card img{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.drag-card:hover img{transform:scale(1.05)}
+.drag-card .cap{position:absolute;bottom:0;left:0;right:0;padding:24px 22px 20px;background:linear-gradient(transparent,rgba(42,38,32,.7));color:var(--cream);font-family:var(--font-display);font-size:22px;font-style:italic}
+.drag-hint{display:flex;align-items:center;gap:12px;margin-top:26px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.drag-hint .ar{width:40px;height:1px;background:var(--tomato)}
+
+/* STORY */
+.story .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:74px;align-items:center}
+.story-img{position:relative;height:560px;overflow:hidden}
+.story-img img{width:100%;height:100%;object-fit:cover;clip-path:inset(100% 0 0 0)}
+.story-text h2{color:var(--olive-deep);margin-bottom:24px}
+.story-text p{color:var(--ink-soft);margin-bottom:18px}
+.story-text .sign{font-family:var(--font-display);font-style:italic;font-size:25px;color:var(--tomato);margin-top:8px}
+
+/* LOCATION */
+.loc{background:var(--cream)}
+.loc .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:stretch}
+.loc-info h2{color:var(--olive-deep);margin-bottom:30px}
+.loc-block{margin-bottom:26px}
+.loc-block .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tomato);margin-bottom:7px}
+.loc-block .val{font-size:17px;color:var(--ink)}
+.loc-block .val a:hover{color:var(--tomato)}
+.hours-row{display:flex;justify-content:space-between;max-width:340px;padding:7px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-soft)}
+.hours-row b{color:var(--ink);font-weight:500}
+.map-wrap{position:relative;min-height:420px;overflow:hidden;border:1px solid var(--line)}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.25) sepia(.1)}
+
+/* FOOTER */
+footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
+.foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;margin-bottom:54px}
+.foot-brand{font-family:var(--font-display);font-size:36px;font-weight:600}
+.foot-brand span{color:#E8B0A2}
+.foot-brand p{font-family:var(--font-body);font-size:14px;color:rgba(251,248,241,.7);margin-top:12px;max-width:280px;font-weight:300}
+.foot-col h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#E8C547;margin-bottom:16px;font-weight:500}
+.foot-col p,.foot-col a{display:block;font-size:15px;color:rgba(251,248,241,.78);margin-bottom:8px}
+.foot-col a:hover{color:var(--cream)}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:26px;border-top:1px solid rgba(251,248,241,.16);font-size:12.5px;color:rgba(251,248,241,.6)}
+
+/* RES PANEL */
+.res-overlay{position:fixed;inset:0;background:rgba(42,38,32,.45);z-index:998;opacity:0;pointer-events:none;transition:opacity .4s}
+.res-overlay.open{opacity:1;pointer-events:all}
+.res-panel{position:fixed;top:0;right:0;width:min(460px,100vw);height:100vh;background:var(--cream);z-index:999;transform:translateX(100%);overflow-y:auto;padding:54px 44px;border-left:3px solid var(--tomato)}
+.res-panel .close{position:absolute;top:30px;right:34px;background:none;border:none;color:var(--ink);font-size:28px;cursor:pointer;line-height:1;font-family:var(--font-display)}
+.res-panel h3{font-size:34px;margin:14px 0 8px;color:var(--olive-deep)}
+.res-panel .lead{font-size:14.5px;color:var(--ink-soft);margin-bottom:32px}
+.field{margin-bottom:20px}
+.field label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;background:var(--pergament);border:1px solid var(--line);color:var(--ink);font-family:var(--font-body);font-size:15px;padding:11px 12px;outline:none;transition:border-color .3s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--tomato)}
+.res-submit{width:100%;margin-top:10px;padding:16px;background:var(--tomato);color:var(--cream);border:none;font-family:var(--font-body);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:background .3s}
+.res-submit:hover{background:#9e3422}
+.res-phone{margin-top:24px;font-size:14px;color:var(--ink-soft);text-align:center}
+.res-phone a{color:var(--tomato)}
+
+/* MOBILE NAV */
+.mnav{position:fixed;inset:0;background:var(--cream);z-index:200;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:28px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.3,1)}
+.mnav.open{transform:translateY(0)}
+.mnav a{font-family:var(--font-display);font-size:34px;color:var(--olive-deep)}
+.mnav .close{position:absolute;top:26px;right:30px;font-size:34px;background:none;border:none;color:var(--ink);font-family:var(--font-display);cursor:pointer}
+
+@media(max-width:980px){
+  .wrap{padding:0 24px}
+  .nav-links,.nav .btn-res{display:none}
+  .burger{display:flex}
+  .pad{padding:84px 0}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-text{padding:120px 24px 60px;order:2}
+  .hero-img{order:1;height:62vh;min-height:380px}
+  .hero-img img{position:relative}
+  .hero-badge{left:24px;bottom:24px}
+  .menu-grid{grid-template-columns:1fr;gap:0}
+  .menu-col:last-child{margin-top:44px}
+  .story .grid,.loc .grid{grid-template-columns:1fr;gap:40px}
+  .story-img{height:400px}
+  .drag-card{width:280px;height:380px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .hero-img img,.story-img img{clip-path:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a href="#" class="brand">Al <span>Pacchero</span></a>
+    <ul class="nav-links">
+      <li><a href="#manifest">Trattoria</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Galerija</a></li>
+      <li><a href="#story">Priča</a></li>
+      <li><a href="#location">Kontakt</a></li>
+    </ul>
+    <button class="btn-res" data-open-res>Rezerviraj stol</button>
+    <button class="burger" id="burger" aria-label="Izbornik"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<nav class="mnav" id="mnav">
+  <button class="close" id="mclose" aria-label="Zatvori">&times;</button>
+  <a href="#manifest" data-mlink>Trattoria</a>
+  <a href="#menu" data-mlink>Menu</a>
+  <a href="#gallery" data-mlink>Galerija</a>
+  <a href="#story" data-mlink>Priča</a>
+  <a href="#location" data-mlink>Kontakt</a>
+  <button class="btn-res" data-open-res style="display:inline-block;margin-top:12px">Rezerviraj stol</button>
+</nav>
+
+<!-- HERO SPLIT -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="eyebrow" id="heroEye">Talijanska trattoria · Zadar</span>
+    <h1>
+      <span class="l"><span>Dalla terra,</span></span>
+      <span class="l"><span class="red">al piatto.</span></span>
+    </h1>
+    <p class="hero-lead" id="heroLead">Sa zemlje, na tanjur. Paccheri iz Kampanije, ručno rađena pašta i jadranska riba — talijanska kuhinja okupana dalmatinskim suncem.</p>
+    <div class="hero-cta" id="heroCta">
+      <button class="primary" data-open-res>Rezerviraj stol</button>
+      <a class="ghost" href="#menu">Pogledaj menu</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=1400&q=80" alt="Svježa talijanska tjestenina na svijetlom stolu" id="heroImg" />
+    <div class="hero-badge">
+      <span class="num"><span id="ratingNum">4.8</span></span>
+      <span class="lbl"><b><span id="revNum">970</span> recenzija</b><br>najdraža talijanska u Zadru</span>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider">
+  <div class="wrap">
+    <svg viewBox="0 0 1200 30" preserveAspectRatio="none"><path d="M0,15 Q150,0 300,15 T600,15 T900,15 T1200,15" /></svg>
+  </div>
+</div>
+
+<!-- MANIFEST -->
+<section class="manifest pad" id="manifest">
+  <div class="wrap inner">
+    <span class="eyebrow reveal">Naša filozofija</span>
+    <p class="reveal" style="margin-top:22px">Paccheri — velika tjestenina iz Napulja, rađena da <span class="red">zagrli umak</span> i okupi ljude za stolom. To je naša kuhinja: velikodušna, sunčana i bez prečaca.</p>
+    <p class="small reveal">Mijesimo tijesto svaki dan, biramo ribu s placa i otvaramo vina koja vole more. Talijanska duša, dalmatinsko svjetlo, dugi ručkovi koji se pretvore u večeri.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats pad" id="stats" style="padding:90px 0">
+  <div class="wrap row">
+    <div class="stat reveal"><div class="n"><span data-count="4.8" data-dec="1">0</span> <span class="star">★</span></div><div class="c">Prosječna ocjena</div></div>
+    <div class="stat reveal"><div class="n"><span data-count="970">0</span></div><div class="c">Zadovoljnih gostiju</div></div>
+    <div class="stat reveal"><div class="n"><span data-count="100">0</span>%</div><div class="c">Ručno rađena pašta</div></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="pad" id="menu">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Sezonska kuhinja</span>
+      <h2 style="margin-top:14px">Što danas dolazi na stol</h2>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-col reveal">
+        <h3>Antipasti & Primi</h3>
+        <div class="menu-item"><div class="top"><span class="name">Paccheri al Pomodoro</span><span class="price">14 €</span></div><p class="desc">Naša potpisna velika tjestenina, dozreli umak od datterino rajčice, bosiljak i maslinovo ulje.</p></div>
+        <div class="menu-item"><div class="top"><span class="name">Spaghetti allo Scoglio</span><span class="price">22 €</span></div><p class="desc">Plodovi mora s Jadrana — školjke, dagnje i škampi u umaku od bijelog vina i češnjaka.</p></div>
+        <div class="menu-item"><div class="top"><span class="name">Tagliatelle al Tartufo</span><span class="price">19 €</span></div><p class="desc">Svježa tjestenina, istarski crni tartuf, maslac i zreli Grana Padano.</p></div>
+        <div class="menu-item"><div class="top"><span class="name">Burrata di Puglia</span><span class="price">13 €</span></div><p class="desc">Kremasta burrata iz Apulije, marinirane rajčice i kruh pečen u kući.</p></div>
+      </div>
+      <div class="menu-col reveal">
+        <h3>Secondi & Dolci</h3>
+        <div class="menu-item"><div class="top"><span class="name">Branzino al Forno</span><span class="price">26 €</span></div><p class="desc">Cijela lovrata iz Jadrana, pečena s ružmarinom, limunom i mladim krumpirom.</p></div>
+        <div class="menu-item"><div class="top"><span class="name">Osso Buco alla Milanese</span><span class="price">24 €</span></div><p class="desc">Polako pirjana teleća koljenica, gremolata i kremasti šafranov rižoto.</p></div>
+        <div class="menu-item"><div class="top"><span class="name">Frittura di Calamari</span><span class="price">18 €</span></div><p class="desc">Hrskavi prženi lignji, limun i domaća majoneza od češnjaka.</p></div>
+        <div class="menu-item"><div class="top"><span class="name">Tiramisù della Casa</span><span class="price">8 €</span></div><p class="desc">Klasik po receptu nonne — mascarpone, espresso i marsala.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY DRAGGABLE -->
+<section class="gallery pad" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Galerija</span>
+      <h2 style="margin-top:14px">Boje našeg stola</h2>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="drag-track" id="dragTrack">
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Tanjur tjestenine" /><figcaption class="cap">Paccheri al pomodoro</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Ručno rađena pašta" /><figcaption class="cap">Tijesto iz ruku</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Plodovi mora" /><figcaption class="cap">Dar Jadrana</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Interijer trattorije" /><figcaption class="cap">Naš stol</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=800&q=80" alt="Čaša talijanskog vina" /><figcaption class="cap">Vino s brda</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Pizza i jela" /><figcaption class="cap">Cucina italiana</figcaption></figure>
+    </div>
+    <div class="drag-hint"><span class="ar"></span>Povucite za više</div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story pad" id="story">
+  <div class="wrap grid">
+    <div class="story-img reveal">
+      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=80" alt="Kuhar priprema tjesteninu" id="storyImg" />
+    </div>
+    <div class="story-text">
+      <span class="eyebrow reveal">Naša priča</span>
+      <h2 class="reveal">Napulj i Zadar,<br>za istim stolom</h2>
+      <p class="reveal">Al Pacchero rodio se iz ljubavi prema južnotalijanskoj kuhinji i prema Zadru — gradu mora i svjetla. Donijeli smo recepte iz Kampanije i Apulije, a obala nam je dala ribu, ulje, vino i goste koji se vraćaju kao prijatelji.</p>
+      <p class="reveal">Naša mala kuhinja svaki dan miješa tijesto i otvara vino. Nije slučajno što nam se 970 gostiju vratilo s ocjenom 4.8 — kuhamo kao za vlastitu obitelj.</p>
+      <p class="sign reveal">— Obitelj Al Pacchero</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="loc pad" id="location">
+  <div class="wrap grid">
+    <div class="loc-info">
+      <span class="eyebrow reveal">Posjetite nas</span>
+      <h2 class="reveal">U srcu<br>staroga Zadra</h2>
+      <div class="loc-block reveal"><div class="lbl">Adresa</div><div class="val">Stari grad, Zadar · Hrvatska</div></div>
+      <div class="loc-block reveal"><div class="lbl">Rezervacije</div><div class="val"><a href="tel:+385915195519">+385 91 519 5519</a></div></div>
+      <div class="loc-block reveal"><div class="lbl">Radno vrijeme</div>
+        <div class="val" style="margin-top:8px">
+          <div class="hours-row"><span>Ponedjeljak — Petak</span><b>12:00 — 23:00</b></div>
+          <div class="hours-row"><span>Subota</span><b>12:00 — 24:00</b></div>
+          <div class="hours-row"><span>Nedjelja</span><b>17:00 — 23:00</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe src="https://maps.google.com/maps?q=Al+Pacchero+Zadar&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Al Pacchero — lokacija u Zadru"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">Al <span>Pacchero</span><p>Talijanska trattoria u srcu Zadra. Sa zemlje, na tanjur.</p></div>
+      <div class="foot-col"><h4>Kontakt</h4><a href="tel:+385915195519">+385 91 519 5519</a><p>Stari grad, Zadar</p><p>Hrvatska</p></div>
+      <div class="foot-col"><h4>Radno vrijeme</h4><p>Pon — Pet · 12—23h</p><p>Subota · 12—24h</p><p>Nedjelja · 17—23h</p></div>
+      <div class="foot-col"><h4>Pratite nas</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#" data-open-res>Rezerviraj stol</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Al Pacchero · Zadar</span><span>4.8 ★ · 970 recenzija · Ručno rađena pašta</span></div>
+  </div>
+</footer>
+
+<!-- RES PANEL -->
+<div class="res-overlay" id="resOverlay"></div>
+<aside class="res-panel" id="resPanel" aria-hidden="true">
+  <button class="close" data-close-res aria-label="Zatvori">&times;</button>
+  <span class="eyebrow">Rezervacija</span>
+  <h3>Rezervirajte stol</h3>
+  <p class="lead">Javite nam datum i broj gostiju — potvrdit ćemo vaš ručak ili večeru u Al Paccheru.</p>
+  <form id="resForm">
+    <div class="field"><label>Ime i prezime</label><input type="text" required placeholder="Vaše ime" /></div>
+    <div class="field"><label>Telefon</label><input type="tel" required placeholder="+385" /></div>
+    <div class="field"><label>Datum</label><input type="date" required /></div>
+    <div class="field"><label>Vrijeme</label><input type="time" required /></div>
+    <div class="field"><label>Broj gostiju</label><select required><option value="2">2 osobe</option><option>1 osoba</option><option>3 osobe</option><option>4 osobe</option><option>5 osoba</option><option>6+ osoba</option></select></div>
+    <div class="field"><label>Napomena</label><textarea rows="2" placeholder="Posebne želje..."></textarea></div>
+    <button type="submit" class="res-submit">Pošalji upit</button>
+  </form>
+  <p class="res-phone">Ili nazovite izravno · <a href="tel:+385915195519">+385 91 519 5519</a></p>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let lenis;
+if(!reduce){
+  lenis = new Lenis({ duration:1.2, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true });
+  gsap.ticker.add(t=>lenis.raf(t*1000));
+  gsap.ticker.lagSmoothing(0);
+  gsap.registerPlugin(ScrollTrigger);
+  lenis.on('scroll', ScrollTrigger.update);
+}
+
+// HEADER
+const header=document.getElementById('header');
+const onScroll=()=>header.classList.toggle('scrolled', window.scrollY>60);
+window.addEventListener('scroll',onScroll); onScroll();
+
+// ANCHORS
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href'); if(id.length<2) return;
+    const t=document.querySelector(id); if(!t) return;
+    e.preventDefault(); closeMnav();
+    if(lenis) lenis.scrollTo(t,{offset:-70}); else t.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// MOBILE NAV
+const mnav=document.getElementById('mnav');
+const closeMnav=()=>mnav.classList.remove('open');
+document.getElementById('burger').addEventListener('click',()=>mnav.classList.add('open'));
+document.getElementById('mclose').addEventListener('click',closeMnav);
+document.querySelectorAll('[data-mlink]').forEach(l=>l.addEventListener('click',closeMnav));
+
+// RES PANEL
+const panel=document.getElementById('resPanel'), ov=document.getElementById('resOverlay');
+function openRes(){ panel.style.transition='transform .5s cubic-bezier(.7,0,.3,1)'; panel.style.transform='translateX(0)'; ov.classList.add('open'); panel.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; if(lenis)lenis.stop(); }
+function closeRes(){ panel.style.transform='translateX(100%)'; ov.classList.remove('open'); panel.setAttribute('aria-hidden','true'); document.body.style.overflow=''; if(lenis)lenis.start(); }
+document.querySelectorAll('[data-open-res]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();closeMnav();openRes();}));
+document.querySelectorAll('[data-close-res]').forEach(b=>b.addEventListener('click',closeRes));
+ov.addEventListener('click',closeRes);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeRes();});
+document.getElementById('resForm').addEventListener('submit',e=>{e.preventDefault();e.target.innerHTML='<p style="font-family:var(--font-display);font-style:italic;font-size:24px;color:var(--tomato);text-align:center;padding:30px 0">Grazie! Javit ćemo vam se uskoro.</p>';});
+
+// DRAGGABLE GALLERY
+(function(){
+  const track=document.getElementById('dragTrack'); if(!track) return;
+  let down=false,startX,scroll=0,cur=0;
+  const max=()=>track.scrollWidth-track.parentElement.offsetWidth+44;
+  function set(x){ cur=Math.max(-max(),Math.min(0,x)); track.style.transform='translateX('+cur+'px)'; }
+  track.addEventListener('pointerdown',e=>{down=true;startX=e.clientX;scroll=cur;track.classList.add('dragging');track.setPointerCapture(e.pointerId);});
+  track.addEventListener('pointermove',e=>{if(!down)return;set(scroll+(e.clientX-startX));});
+  track.addEventListener('pointerup',()=>{down=false;track.classList.remove('dragging');});
+  track.addEventListener('pointercancel',()=>{down=false;track.classList.remove('dragging');});
+  window.addEventListener('resize',()=>set(cur));
+})();
+
+// COUNT-UP
+function countUp(el){
+  const target=parseFloat(el.dataset.count), dec=parseInt(el.dataset.dec||'0');
+  const obj={v:0};
+  gsap.to(obj,{v:target,duration:1.8,ease:'power2.out',onUpdate:()=>{el.textContent=dec?obj.v.toFixed(dec):Math.round(obj.v).toLocaleString('hr-HR');}});
+}
+
+if(!reduce){
+  // HERO entrance
+  gsap.set('#heroImg',{clipPath:'inset(0 0 100% 0)'});
+  const tl=gsap.timeline({delay:.2});
+  tl.to('#heroImg',{clipPath:'inset(0 0 0% 0)',duration:1.3,ease:'power3.inOut'},0)
+    .to('#heroEye',{opacity:1,y:0,duration:.8,ease:'power3.out'},.3)
+    .from('.hero-text h1 .l span',{yPercent:110,duration:1,stagger:.14,ease:'power4.out'},.45)
+    .to('#heroLead',{opacity:1,duration:.9},1.0)
+    .to('#heroCta',{opacity:1,duration:.9},1.15);
+
+  // reveals
+  gsap.utils.toArray('.reveal').forEach(el=>{
+    gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+
+  // clip reveal story image
+  gsap.to('#storyImg',{clipPath:'inset(0 0 0% 0)',duration:1.2,ease:'power3.inOut',scrollTrigger:{trigger:'#storyImg',start:'top 80%'}});
+
+  // count-up triggers
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>countUp(el)});
+  });
+} else {
+  document.querySelectorAll('#heroEye,#heroLead,#heroCta').forEach(el=>el.style.opacity=1);
+  document.querySelectorAll('[data-count]').forEach(el=>{const d=parseInt(el.dataset.dec||'0');el.textContent=d?parseFloat(el.dataset.count).toFixed(d):parseInt(el.dataset.count).toLocaleString('hr-HR');});
+}
+</script>
+</body>
+</html>
