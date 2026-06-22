@@ -397,7 +397,7 @@ footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let lenis;
 if(!reduce){
-  lenis = new Lenis({ duration:1.2, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true });
+  lenis = new Lenis({lerp:0.2, wheelMultiplier:1, smoothWheel:true, syncTouch:false});
   gsap.ticker.add(t=>lenis.raf(t*1000));
   gsap.ticker.lagSmoothing(0);
   gsap.registerPlugin(ScrollTrigger);
