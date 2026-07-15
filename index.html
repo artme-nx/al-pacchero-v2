@@ -3,8 +3,53 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Al Pacchero — Talijanska trattoria, Zadar</title>
-<meta name="description" content="Al Pacchero — svijetla talijanska trattoria u Zadru. Paccheri iz Kampanije, ručno rađena pašta, jadranska riba i talijanska vina. 4.8 ★ od 970 gostiju." />
+<title>Al Pacchero — talijanski bistro u Zadru | Stari grad</title>
+<meta name="description" content="Al Pacchero — talijanski bistro u zadarskoj staroj jezgri, Ul. Brne Karnarutića 5. Talijanska kuhinja, riba i plodovi mora. Rezervacije: +385 91 519 5519." />
+<link rel="canonical" href="https://artme-nx.github.io/al-pacchero-v2/" />
+
+<meta property="og:type" content="restaurant" />
+<meta property="og:locale" content="hr_HR" />
+<meta property="og:title" content="Al Pacchero — talijanski bistro u Zadru" />
+<meta property="og:description" content="Talijanski bistro u zadarskoj staroj jezgri, Ul. Brne Karnarutića 5. Rezervacije: +385 91 519 5519." />
+<meta property="og:url" content="https://artme-nx.github.io/al-pacchero-v2/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- JSON-LD sinkroniziran s VERIFIED.md (provjereno 15.07.2026).
+     Namjerno IZOSTAVLJENO:
+     - openingHoursSpecification → GBP ne objavljuje radno vrijeme, objekt je privremeno zatvoren
+     - aggregateRating → SEO.md §3.1: ocjene s Googlea/TripAdvisora se NE unose u schemu
+     - hasMenu → eatbu jelovnik vlasnika je mrtav (404)
+     KONFLIKT ADRESE: GBP i TripAdvisor = Brne Karnarutića 5; vlastiti FB i obrtni
+     registar = Brne Karnarutića 11. Korišten br. 5 po hijerarhiji izvora (SEO.md §3.1).
+     TRAŽI POTVRDU VLASNIKA prije objave. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://artme-nx.github.io/al-pacchero-v2/#restaurant",
+  "name": "Al Pacchero",
+  "url": "https://artme-nx.github.io/al-pacchero-v2/",
+  "telephone": "+385 91 519 5519",
+  "email": "lpaocic175@gmail.com",
+  "priceRange": "$$ - $$$",
+  "servesCuisine": ["Talijanska", "Riba i plodovi mora", "Mediteranska"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ul. Brne Karnarutića 5",
+    "addressLocality": "Zadar",
+    "postalCode": "23000",
+    "addressRegion": "Zadarska županija",
+    "addressCountry": "HR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 44.1157076, "longitude": 15.2265258 },
+  "acceptsReservations": "True",
+  "sameAs": [
+    "https://www.facebook.com/alpaccherozd/",
+    "https://www.instagram.com/al_pacchero/",
+    "https://www.tripadvisor.com/Restaurant_Review-g295374-d17526411-Reviews-Al_Pacchero-Zadar_Zadar_County_Dalmatia.html"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -228,7 +273,7 @@ footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
 <!-- HERO SPLIT -->
 <section class="hero">
   <div class="hero-text">
-    <span class="eyebrow" id="heroEye">Talijanska trattoria · Zadar</span>
+    <span class="eyebrow" id="heroEye">Talijanski bistro · Zadar</span>
     <h1>
       <span class="l"><span>Dalla terra,</span></span>
       <span class="l"><span class="red">al piatto.</span></span>
@@ -240,10 +285,14 @@ footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
     </div>
   </div>
   <div class="hero-img">
-    <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=1400&q=80" alt="Svježa talijanska tjestenina na svijetlom stolu" id="heroImg" />
+    <!-- PLACEHOLDER SLIKA — nije Al Pacchero. Stock fotografija drugog objekta (Unsplash).
+         Zamjena vlasnikovom fotografijom: vidi MANUAL_ASSETS.md. -->
+    <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=1400&q=80" alt="Placeholder: tanjur tjestenine (nije Al Pacchero)" id="heroImg" />
+    <!-- TRUTH PASS: "najdraža talijanska u Zadru" je neprovjeriva superlativna tvrdnja.
+         Zamijenjena stvarnim, provjerenim TripAdvisor plasmanom (15.07.2026). -->
     <div class="hero-badge">
       <span class="num"><span id="ratingNum">4.8</span></span>
-      <span class="lbl"><b><span id="revNum">970</span> recenzija</b><br>najdraža talijanska u Zadru</span>
+      <span class="lbl"><b><span id="revNum">970</span> recenzija</b><br>5. od 310 restorana u Zadru · TripAdvisor</span>
     </div>
   </div>
 </section>
@@ -259,43 +308,60 @@ footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
 <section class="manifest pad" id="manifest">
   <div class="wrap inner">
     <span class="eyebrow reveal">Naša filozofija</span>
-    <p class="reveal" style="margin-top:22px">Paccheri — velika tjestenina iz Napulja, rađena da <span class="red">zagrli umak</span> i okupi ljude za stolom. To je naša kuhinja: velikodušna, sunčana i bez prečaca.</p>
-    <p class="small reveal">Mijesimo tijesto svaki dan, biramo ribu s placa i otvaramo vina koja vole more. Talijanska duša, dalmatinsko svjetlo, dugi ručkovi koji se pretvore u večeri.</p>
+    <!-- TRUTH PASS: uklonjene neprovjerive tvrdnje (svakodnevno mijesenje tijesta,
+         nabava ribe s placa, vinska ponuda). Zadržan općeniti kulinarski opis paccherija
+         i vlastiti opis objekta s njegovog Instagram profila. -->
+    <p class="reveal" style="margin-top:22px">Paccheri: velika tjestenina iz Kampanije, rađena da <span class="red">zagrli umak</span> i okupi ljude za stolom.</p>
+    <p class="small reveal">Kako se objekt sam predstavlja: „Pozivamo vas na kulinarsko putovanje uz izvrsno vino i hranu pripremljenu s ljubavlju, u srcu zadarske stare jezgre.”</p>
   </div>
 </section>
 
 <!-- STATS -->
 <section class="stats pad" id="stats" style="padding:90px 0">
   <div class="wrap row">
-    <div class="stat reveal"><div class="n"><span data-count="4.8" data-dec="1">0</span> <span class="star">★</span></div><div class="c">Prosječna ocjena</div></div>
-    <div class="stat reveal"><div class="n"><span data-count="970">0</span></div><div class="c">Zadovoljnih gostiju</div></div>
-    <div class="stat reveal"><div class="n"><span data-count="100">0</span>%</div><div class="c">Ručno rađena pašta</div></div>
+    <!-- TRUTH PASS:
+         - "Zadovoljnih gostiju: 970" → 970 je BROJ RECENZIJA na TripAdvisoru, ne broj gostiju.
+         - "100% ručno rađena pašta" → uklonjeno, nema izvora za tu tvrdnju.
+         Zamijenjeno provjerenim podacima s izvorima (15.07.2026). -->
+    <div class="stat reveal"><div class="n"><span data-count="4.8" data-dec="1">0</span> <span class="star">★</span></div><div class="c">TripAdvisor · 970 recenzija</div></div>
+    <div class="stat reveal"><div class="n"><span data-count="4.5" data-dec="1">0</span> <span class="star">★</span></div><div class="c">Google · 1.070 recenzija</div></div>
+    <div class="stat reveal"><div class="n">5.</div><div class="c">od 310 restorana u Zadru · TripAdvisor</div></div>
   </div>
 </section>
 
 <!-- MENU -->
 <section class="pad" id="menu">
   <div class="wrap">
+    <!-- TRUTH PASS — JELOVNIK.
+         Uklonjeno svih 8 izmišljenih cijena (14/22/19/13/26/24/18/8 €) i svi izmišljeni
+         opisi jela. Nijedna cijena nije provjerljiva: vlasnikov eatbu jelovnik (jedini
+         jelovnik koji je objekt sam objavio, povezan s GBP-a) vraća 404, a GBP nema cjenik.
+         Cijene s blogova/recenzija se po Hard rule 1 NE koriste.
+         Dolje navedena jela NISU jelovnik nego jela koja gosti najčešće spominju
+         (TripAdvisor "popular mentions" + GBP "Popularno" + GBP kategorije fotografija). -->
     <div class="sec-head center reveal">
-      <span class="eyebrow">Sezonska kuhinja</span>
-      <h2 style="margin-top:14px">Što danas dolazi na stol</h2>
+      <span class="eyebrow">Iz ponude</span>
+      <h2 style="margin-top:14px">Jela koja gosti najčešće spominju</h2>
     </div>
     <div class="menu-grid">
       <div class="menu-col reveal">
-        <h3>Antipasti & Primi</h3>
-        <div class="menu-item"><div class="top"><span class="name">Paccheri al Pomodoro</span><span class="price">14 €</span></div><p class="desc">Naša potpisna velika tjestenina, dozreli umak od datterino rajčice, bosiljak i maslinovo ulje.</p></div>
-        <div class="menu-item"><div class="top"><span class="name">Spaghetti allo Scoglio</span><span class="price">22 €</span></div><p class="desc">Plodovi mora s Jadrana — školjke, dagnje i škampi u umaku od bijelog vina i češnjaka.</p></div>
-        <div class="menu-item"><div class="top"><span class="name">Tagliatelle al Tartufo</span><span class="price">19 €</span></div><p class="desc">Svježa tjestenina, istarski crni tartuf, maslac i zreli Grana Padano.</p></div>
-        <div class="menu-item"><div class="top"><span class="name">Burrata di Puglia</span><span class="price">13 €</span></div><p class="desc">Kremasta burrata iz Apulije, marinirane rajčice i kruh pečen u kući.</p></div>
+        <h3>Tjestenina & Antipasti</h3>
+        <div class="menu-item"><div class="top"><span class="name">Paccheri</span></div></div>
+        <div class="menu-item"><div class="top"><span class="name">Ravioli</span></div></div>
+        <div class="menu-item"><div class="top"><span class="name">Carpaccio od tune s crnim tartufom</span></div></div>
+        <div class="menu-item"><div class="top"><span class="name">Rižoto</span></div></div>
       </div>
       <div class="menu-col reveal">
-        <h3>Secondi & Dolci</h3>
-        <div class="menu-item"><div class="top"><span class="name">Branzino al Forno</span><span class="price">26 €</span></div><p class="desc">Cijela lovrata iz Jadrana, pečena s ružmarinom, limunom i mladim krumpirom.</p></div>
-        <div class="menu-item"><div class="top"><span class="name">Osso Buco alla Milanese</span><span class="price">24 €</span></div><p class="desc">Polako pirjana teleća koljenica, gremolata i kremasti šafranov rižoto.</p></div>
-        <div class="menu-item"><div class="top"><span class="name">Frittura di Calamari</span><span class="price">18 €</span></div><p class="desc">Hrskavi prženi lignji, limun i domaća majoneza od češnjaka.</p></div>
-        <div class="menu-item"><div class="top"><span class="name">Tiramisù della Casa</span><span class="price">8 €</span></div><p class="desc">Klasik po receptu nonne — mascarpone, espresso i marsala.</p></div>
+        <h3>Riba, plodovi mora & Dolci</h3>
+        <div class="menu-item"><div class="top"><span class="name">Fritto misto</span></div></div>
+        <div class="menu-item"><div class="top"><span class="name">Hobotnica, dagnje i jakovske kapice</span></div></div>
+        <div class="menu-item"><div class="top"><span class="name">Pizza</span></div></div>
+        <div class="menu-item"><div class="top"><span class="name">Tiramisu</span></div></div>
       </div>
     </div>
+    <p class="reveal" style="text-align:center;margin-top:40px;font-size:14px;opacity:.7">Popis je sastavljen prema jelima koja gosti najčešće spominju u recenzijama na Googleu i TripAdvisoru, a ne prema službenom jelovniku · Cijene i cjeloviti jelovnik potvrdite izravno s objektom · Prema TripAdvisoru: vegetarijanske i bezglutenske opcije</p>
+    <!-- UNVERIFIED: cijene, cjeloviti jelovnik, vinska karta, sezonska ponuda. -->
+    <p class="reveal" style="text-align:center;margin-top:12px;font-size:14px;opacity:.7">Ažurirano: srpanj 2026.</p>
   </div>
 </section>
 
@@ -308,13 +374,17 @@ footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
     </div>
   </div>
   <div class="wrap">
+    <!-- PLACEHOLDER SLIKE — nijedna nije Al Pacchero (Unsplash stock, drugi objekti).
+         Natpisi tipa "Paccheri al pomodoro" i "Naš stol" tvrdili su da su to jela i
+         interijer ovog objekta, što nije točno. Zamijenjeni neutralnim oznakama dok
+         se ne ubace vlasnikove fotografije — vidi MANUAL_ASSETS.md. -->
     <div class="drag-track" id="dragTrack">
-      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Tanjur tjestenine" /><figcaption class="cap">Paccheri al pomodoro</figcaption></figure>
-      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Ručno rađena pašta" /><figcaption class="cap">Tijesto iz ruku</figcaption></figure>
-      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Plodovi mora" /><figcaption class="cap">Dar Jadrana</figcaption></figure>
-      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Interijer trattorije" /><figcaption class="cap">Naš stol</figcaption></figure>
-      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=800&q=80" alt="Čaša talijanskog vina" /><figcaption class="cap">Vino s brda</figcaption></figure>
-      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Pizza i jela" /><figcaption class="cap">Cucina italiana</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Placeholder: tanjur tjestenine (nije Al Pacchero)" /><figcaption class="cap">Placeholder</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Placeholder: svježa tjestenina (nije Al Pacchero)" /><figcaption class="cap">Placeholder</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Placeholder: plodovi mora (nije Al Pacchero)" /><figcaption class="cap">Placeholder</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Placeholder: interijer restorana (nije Al Pacchero)" /><figcaption class="cap">Placeholder</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=800&q=80" alt="Placeholder: čaša vina (nije Al Pacchero)" /><figcaption class="cap">Placeholder</figcaption></figure>
+      <figure class="drag-card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Placeholder: pizza (nije Al Pacchero)" /><figcaption class="cap">Placeholder</figcaption></figure>
     </div>
     <div class="drag-hint"><span class="ar"></span>Povucite za više</div>
   </div>
@@ -324,14 +394,18 @@ footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
 <section class="story pad" id="story">
   <div class="wrap grid">
     <div class="story-img reveal">
-      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=80" alt="Kuhar priprema tjesteninu" id="storyImg" />
+      <!-- PLACEHOLDER SLIKA — nije Al Pacchero. Vidi MANUAL_ASSETS.md. -->
+      <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=80" alt="Placeholder: priprema tjestenine (nije Al Pacchero)" id="storyImg" />
     </div>
     <div class="story-text">
-      <span class="eyebrow reveal">Naša priča</span>
-      <h2 class="reveal">Napulj i Zadar,<br>za istim stolom</h2>
-      <p class="reveal">Al Pacchero rodio se iz ljubavi prema južnotalijanskoj kuhinji i prema Zadru — gradu mora i svjetla. Donijeli smo recepte iz Kampanije i Apulije, a obala nam je dala ribu, ulje, vino i goste koji se vraćaju kao prijatelji.</p>
-      <p class="reveal">Naša mala kuhinja svaki dan miješa tijesto i otvara vino. Nije slučajno što nam se 970 gostiju vratilo s ocjenom 4.8 — kuhamo kao za vlastitu obitelj.</p>
-      <p class="sign reveal">— Obitelj Al Pacchero</p>
+      <!-- TRUTH PASS: uklonjeno "recepte iz Kampanije i Apulije", "obitelj Al Pacchero"
+           (nema izvora da je obiteljski posao) i tvrdnja "970 gostiju vratilo s ocjenom
+           4.8" — to je BROJ RECENZIJA na TripAdvisoru, a ne broj gostiju koji su se vratili. -->
+      <span class="eyebrow reveal">O objektu</span>
+      <h2 class="reveal">Talijanska kuhinja<br>u staroj jezgri</h2>
+      <p class="reveal">Al Pacchero je talijanski bistro u zadarskoj staroj jezgri, u Ulici Brne Karnarutića, nekoliko koraka od crkve sv. Krševana. Kuhinja je talijanska, s naglaskom na ribu i plodove mora Jadrana.</p>
+      <p class="reveal">Gosti su ga ocijenili 4,8 od 5 na TripAdvisoru (970 recenzija) i 4,5 od 5 na Googleu (1.070 recenzija), gdje drži 5. mjesto od 310 restorana u Zadru i priznanje Travelers' Choice 2025. Ocjene su provjerene 15.07.2026.</p>
+      <p class="sign reveal">Al Pacchero, Zadar</p>
     </div>
   </div>
 </section>
@@ -342,18 +416,28 @@ footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
     <div class="loc-info">
       <span class="eyebrow reveal">Posjetite nas</span>
       <h2 class="reveal">U srcu<br>staroga Zadra</h2>
-      <div class="loc-block reveal"><div class="lbl">Adresa</div><div class="val">Stari grad, Zadar · Hrvatska</div></div>
+      <!-- TRUTH PASS — STATUS OBJEKTA.
+           Google Business Profile i TripAdvisor (potvrđeni/claimed profil) oba 15.07.2026.
+           prikazuju objekt kao PRIVREMENO ZATVOREN; TripAdvisor navodi datum otvaranja
+           31.08.2026. Ako je objekt u međuvremenu otvoren, vlasnik neka javi i blok se briše. -->
+      <div class="loc-block reveal"><div class="lbl">Status</div><div class="val">Objekt je privremeno zatvoren. Prema TripAdvisoru ponovno otvaranje se očekuje 31.08.2026. Termin potvrdite pozivom.</div></div>
+      <!-- KONFLIKT: GBP i TripAdvisor = br. 5; vlastiti FB i obrtni registar = br. 11.
+           Prikazan br. 5 po hijerarhiji izvora. TRAŽI POTVRDU VLASNIKA. -->
+      <div class="loc-block reveal"><div class="lbl">Adresa</div><div class="val">Ul. Brne Karnarutića 5, 23000 Zadar · Hrvatska</div></div>
       <div class="loc-block reveal"><div class="lbl">Rezervacije</div><div class="val"><a href="tel:+385915195519">+385 91 519 5519</a></div></div>
+      <div class="loc-block reveal"><div class="lbl">E-pošta</div><div class="val"><a href="mailto:lpaocic175@gmail.com">lpaocic175@gmail.com</a></div></div>
+      <!-- TRUTH PASS: uklonjeno izmišljeno radno vrijeme (12—23 / 12—24 / 17—23).
+           GBP NE objavljuje radno vrijeme, a aggregatori se ne slažu
+           (12:00—22:30 / 17:30—22:00 / 17:00—23:30). Ne prikazuje se dok ga vlasnik ne potvrdi. -->
       <div class="loc-block reveal"><div class="lbl">Radno vrijeme</div>
-        <div class="val" style="margin-top:8px">
-          <div class="hours-row"><span>Ponedjeljak — Petak</span><b>12:00 — 23:00</b></div>
-          <div class="hours-row"><span>Subota</span><b>12:00 — 24:00</b></div>
-          <div class="hours-row"><span>Nedjelja</span><b>17:00 — 23:00</b></div>
-        </div>
+        <div class="val">Radno vrijeme za novu sezonu potvrdite pozivom na +385 91 519 5519.</div>
+        <!-- UNVERIFIED: radno vrijeme po danima, sezonska podjela ljeto/zima. -->
       </div>
+      <div class="loc-block reveal"><div class="lbl">Ocjene gostiju</div><div class="val">4,8 ★ TripAdvisor (970 recenzija) · 4,5 ★ Google (1.070 recenzija) · provjereno 15.07.2026.</div></div>
     </div>
     <div class="map-wrap reveal">
-      <iframe src="https://maps.google.com/maps?q=Al+Pacchero+Zadar&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Al Pacchero — lokacija u Zadru"></iframe>
+      <!-- Koordinate s Google Maps pina, provjereno 15.07.2026: 44.1157076, 15.2265258 (Plus kod 468G+7J Zadar) -->
+      <iframe src="https://maps.google.com/maps?q=44.1157076,15.2265258&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Al Pacchero, Ul. Brne Karnarutića 5, Zadar — lokacija na karti"></iframe>
     </div>
   </div>
 </section>
@@ -362,12 +446,13 @@ footer{background:var(--olive-deep);color:var(--cream);padding:80px 0 38px}
 <footer>
   <div class="wrap">
     <div class="foot-grid">
-      <div class="foot-brand">Al <span>Pacchero</span><p>Talijanska trattoria u srcu Zadra. Sa zemlje, na tanjur.</p></div>
-      <div class="foot-col"><h4>Kontakt</h4><a href="tel:+385915195519">+385 91 519 5519</a><p>Stari grad, Zadar</p><p>Hrvatska</p></div>
-      <div class="foot-col"><h4>Radno vrijeme</h4><p>Pon — Pet · 12—23h</p><p>Subota · 12—24h</p><p>Nedjelja · 17—23h</p></div>
-      <div class="foot-col"><h4>Pratite nas</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#" data-open-res>Rezerviraj stol</a></div>
+      <div class="foot-brand">Al <span>Pacchero</span><p>Talijanski bistro u zadarskoj staroj jezgri.</p></div>
+      <div class="foot-col"><h4>Kontakt</h4><a href="tel:+385915195519">+385 91 519 5519</a><a href="mailto:lpaocic175@gmail.com">lpaocic175@gmail.com</a><p>Ul. Brne Karnarutića 5</p><p>23000 Zadar, Hrvatska</p></div>
+      <!-- TRUTH PASS: izmišljeno radno vrijeme uklonjeno, vidi #location. -->
+      <div class="foot-col"><h4>Radno vrijeme</h4><p>Objekt je privremeno zatvoren.</p><p>Radno vrijeme potvrdite pozivom.</p></div>
+      <div class="foot-col"><h4>Pratite nas</h4><a href="https://www.instagram.com/al_pacchero/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/alpaccherozd/" target="_blank" rel="noopener">Facebook</a><a href="https://www.tripadvisor.com/Restaurant_Review-g295374-d17526411-Reviews-Al_Pacchero-Zadar_Zadar_County_Dalmatia.html" target="_blank" rel="noopener">TripAdvisor</a></div>
     </div>
-    <div class="foot-bottom"><span>© 2026 Al Pacchero · Zadar</span><span>4.8 ★ · 970 recenzija · Ručno rađena pašta</span></div>
+    <div class="foot-bottom"><span>© 2026 Al Pacchero · Ul. Brne Karnarutića 5, 23000 Zadar</span><span>Talijanska kuhinja · Riba i plodovi mora</span></div>
   </div>
 </footer>
 
